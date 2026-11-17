@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Silva Manager</title>
+  <style>
+    :root{--verde:#08715b;--verde-escuro:#075c4b;--texto:#182033;--cinza:#667085;--linha:#e7eaf0;--fundo:#f4f6f8}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:var(--fundo);color:var(--texto)}
+    .topo{height:58px;background:var(--verde);display:flex;align-items:center;padding:0 20px;color:white;font-weight:800}
+    main{max-width:720px;margin:24px auto;padding:0 16px}.card{background:white;border:1px solid var(--linha);border-radius:14px;padding:24px;margin-bottom:18px;box-shadow:0 2px 8px rgba(16,24,40,.05)}
+    h1{margin:0 0 12px;font-size:34px}p{font-size:20px;line-height:1.45;color:#344054}.botao{width:100%;border:0;border-radius:8px;background:var(--verde);color:white;padding:16px;font-size:18px;font-weight:800;text-transform:uppercase;cursor:pointer}.botao:hover{background:var(--verde-escuro)}
+    h2{margin:0 0 16px;font-size:25px}.ligas{display:grid;grid-template-columns:1fr 1fr;gap:12px}.liga{background:#fff;border:0;text-align:left;padding:10px 8px;border-radius:8px;cursor:pointer}.liga strong{display:block;font-size:20px}.liga span{color:var(--cinza);font-size:17px}.liga:hover{background:#eff7f4}
+    .premios{list-style:none;padding:0;margin:0}.premios li{font-size:19px;margin:14px 0}.estrela{color:#f5b700}.verificar{color:#3dc47e}.azul{color:#4aa3ff}
+    @media(max-width:600px){main{margin:16px auto}h1{font-size:28px}.ligas{grid-template-columns:1fr 1fr}.liga strong,.liga span{font-size:16px}.card{padding:18px}}
+  </style>
+</head>
+<body>
+  <header class="topo">⚽ Silva Manager</header>
+  <main>
+    <section class="card">
+      <h1>Monte seu clube e dispute com jogadores do mundo todo</h1>
+      <p>Escolha uma liga, assuma o lugar de um time bot e jogue 30 rodadas por temporada — uma por dia. Os 4 primeiros vão para a copa continental e para o Mundial.</p>
+      <button class="botao" id="jogar">▶ Jogar agora</button>
+    </section>
+    <section class="card"><h2>🌍 Ligas</h2><div class="ligas">
+      <button class="liga"><strong>🏴 Inglaterra</strong><span>Europa League</span></button><button class="liga"><strong>🇧🇷 Brasil</strong><span>Copa América</span></button>
+      <button class="liga"><strong>🇧🇴 Bolívia</strong><span>Copa América</span></button><button class="liga"><strong>🇦🇷 Argentina</strong><span>Copa América</span></button>
+      <button class="liga"><strong>🇵🇹 Portugal</strong><span>Europa League</span></button><button class="liga"><strong>🇫🇷 França</strong><span>Europa League</span></button>
+      <button class="liga"><strong>🇮🇹 Itália</strong><span>Europa League</span></button><button class="liga"><strong>🇺🇾 Uruguai</strong><span>Copa América</span></button>
+    </div></section>
+    <section class="card"><h2>🏆 Estrelas no escudo</h2><ul class="premios"><li><span class="estrela">★</span> Amarela — campeão da liga nacional (18.000.000)</li><li><span class="verificar">★</span> Verde — campeão da Europa League ou Copa América</li><li><span class="azul">★</span> Azul — campeão do Mundial</li></ul></section>
+  </main>
+  <script>
+    document.getElementById('jogar').addEventListener('click',()=>alert('Silva Manager: sua temporada começará em breve!'));
+  </script>
+</body>
+</html>
